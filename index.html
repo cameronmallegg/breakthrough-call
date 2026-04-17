@@ -299,13 +299,13 @@
     <!-- BUTTON 1 -->
     <div class="btn-wrap">
       <a href="#what-happens" class="btn">Book Your Breakthrough Call</a>
-      <p style="font-size: 13px; color: #FFFFFF; font-weight: 500; text-align: center; margin-top: 10px; text-decoration: underline;">Before booking, please read what's below — it takes 2 minutes.</p>
+      <p style="font-size: 16px; color: #FFFFFF; font-weight: 500; text-align: center; margin-top: 12px;"><a href="#the-breakthrough-call" style="color: #FFFFFF; text-decoration: none;">Didn't watch the video? Start here.</a></p>
     </div>
 
     <div class="divider" style="margin-top: 48px;"></div>
 
     <!-- SECTION: The Breakthrough Call -->
-    <div class="section">
+    <div class="section" id="the-breakthrough-call">
       <div class="section-inner">
         <h2>The Breakthrough Call</h2>
         <p>You've already tried changing your circumstances. New job. New city. New routine. And you're still in the same place emotionally. Still restless. Still feeling like something is fundamentally off.</p>
@@ -320,7 +320,6 @@
     <!-- SECTION: What happens on the call -->
     <div class="section" id="what-happens">
       <div class="section-inner">
-        <p style="color: #666666; font-size: 13px; font-style: italic; margin-bottom: 8px;">Didn't watch the video? Start here.</p>
         <h2>What happens on the call</h2>
         <p>Before we get on, you'll fill out a short intake form. I read every word of it before we speak. We don't waste time on surface level discovery — we go straight to the work.</p>
 
@@ -414,14 +413,7 @@
       </div>
     </div>
 
-    <!-- BUTTON 2 -->
-    <div class="btn-wrap" style="padding-bottom: 0;">
-      <div class="inner" style="padding: 0 24px;">
-        <a href="https://calendly.com/cammallegg/the-breakthrough-call" class="btn calendly-btn" style="opacity: 0.4; pointer-events: none; cursor: not-allowed;">Book Your Breakthrough Call — $299</a>
-      </div>
-    </div>
-
-    <div class="divider" style="margin-top: 48px;"></div>
+    <div class="divider"></div>
 
     <!-- FINAL CTA -->
     <div class="section final-cta">
@@ -429,11 +421,6 @@
         <h2>Stop losing years to the wrong version of your life.</h2>
         <p>$299 to finally understand what's been quietly holding you back from everything you actually want. $299 to walk away with a direction that is actually yours. $299 to stop going through the motions and start building something real.</p>
         <p>That's not an expense. That's the most valuable thing you'll spend money on this year.</p>
-      </div>
-
-      <!-- BUTTON 3 -->
-      <div style="padding: 32px 24px 0;">
-        <a href="https://calendly.com/cammallegg/the-breakthrough-call" class="btn calendly-btn" style="opacity: 0.4; pointer-events: none; cursor: not-allowed;">Book Your Breakthrough Call — $299</a>
       </div>
     </div>
 
@@ -444,6 +431,10 @@
       <div class="section-inner">
         <h2>Before you book — please read</h2>
         <p>All information shared during our session is strictly confidential. Recording of the call from either side is not permitted. After the call you will receive a written summary of your game plan for your personal use only — this document is not to be shared or distributed.</p>
+
+        <div style="margin-top: 24px;">
+          <a href="https://calendly.com/cammallegg/the-breakthrough-call" class="btn" id="calendly-btn" style="opacity: 0.4; pointer-events: none; cursor: not-allowed;">Book Your Breakthrough Call — $299</a>
+        </div>
 
         <div class="checkbox-card">
           <input type="checkbox" id="consent" />
@@ -458,23 +449,20 @@
     </div>
 
   </div>
-
   <script>
     const checkbox = document.getElementById('consent');
-    const btns = document.querySelectorAll('.calendly-btn');
+    const btn = document.getElementById('calendly-btn');
 
     checkbox.addEventListener('change', function () {
-      btns.forEach(function (btn) {
-        if (checkbox.checked) {
-          btn.style.opacity = '1';
-          btn.style.pointerEvents = 'auto';
-          btn.style.cursor = 'pointer';
-        } else {
-          btn.style.opacity = '0.4';
-          btn.style.pointerEvents = 'none';
-          btn.style.cursor = 'not-allowed';
-        }
-      });
+      if (checkbox.checked) {
+        btn.style.opacity = '1';
+        btn.style.pointerEvents = 'auto';
+        btn.style.cursor = 'pointer';
+      } else {
+        btn.style.opacity = '0.4';
+        btn.style.pointerEvents = 'none';
+        btn.style.cursor = 'not-allowed';
+      }
     });
   </script>
 </body>
