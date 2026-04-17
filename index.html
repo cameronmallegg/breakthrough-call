@@ -299,6 +299,7 @@
     <!-- BUTTON 1 -->
     <div class="btn-wrap">
       <a href="#what-happens" class="btn">Book Your Breakthrough Call</a>
+      <p style="font-size: 13px; color: #FFFFFF; font-weight: 500; text-align: center; margin-top: 10px; text-decoration: underline;">Before booking, please read what's below — it takes 2 minutes.</p>
     </div>
 
     <div class="divider" style="margin-top: 48px;"></div>
@@ -416,11 +417,27 @@
     <!-- BUTTON 2 -->
     <div class="btn-wrap" style="padding-bottom: 0;">
       <div class="inner" style="padding: 0 24px;">
-        <a href="#calendly" class="btn">Book Your Breakthrough Call — $299</a>
+        <a href="https://calendly.com/cammallegg/the-breakthrough-call" class="btn calendly-btn" style="opacity: 0.4; pointer-events: none; cursor: not-allowed;">Book Your Breakthrough Call — $299</a>
       </div>
     </div>
 
     <div class="divider" style="margin-top: 48px;"></div>
+
+    <!-- FINAL CTA -->
+    <div class="section final-cta">
+      <div class="section-inner">
+        <h2>Stop losing years to the wrong version of your life.</h2>
+        <p>$299 to finally understand what's been quietly holding you back from everything you actually want. $299 to walk away with a direction that is actually yours. $299 to stop going through the motions and start building something real.</p>
+        <p>That's not an expense. That's the most valuable thing you'll spend money on this year.</p>
+      </div>
+
+      <!-- BUTTON 3 -->
+      <div style="padding: 32px 24px 0;">
+        <a href="https://calendly.com/cammallegg/the-breakthrough-call" class="btn calendly-btn" style="opacity: 0.4; pointer-events: none; cursor: not-allowed;">Book Your Breakthrough Call — $299</a>
+      </div>
+    </div>
+
+    <div class="divider"></div>
 
     <!-- SECTION: Before you book -->
     <div class="section" id="before-you-book">
@@ -435,27 +452,30 @@
       </div>
     </div>
 
-    <div class="divider"></div>
-
-    <!-- FINAL CTA -->
-    <div class="section final-cta">
-      <div class="section-inner">
-        <h2>Stop losing years to the wrong version of your life.</h2>
-        <p>$299 to finally understand what's been quietly holding you back from everything you actually want. $299 to walk away with a direction that is actually yours. $299 to stop going through the motions and start building something real.</p>
-        <p>That's not an expense. That's the most valuable thing you'll spend money on this year.</p>
-      </div>
-
-      <!-- BUTTON 3 -->
-      <div style="padding: 32px 24px 0;">
-        <a href="#calendly" class="btn">Book Your Breakthrough Call — $299</a>
-      </div>
-    </div>
-
     <!-- FOOTER -->
     <div class="footer">
       <p>© 2025 Cameron Mallegg. All rights reserved.</p>
     </div>
 
   </div>
+
+  <script>
+    const checkbox = document.getElementById('consent');
+    const btns = document.querySelectorAll('.calendly-btn');
+
+    checkbox.addEventListener('change', function () {
+      btns.forEach(function (btn) {
+        if (checkbox.checked) {
+          btn.style.opacity = '1';
+          btn.style.pointerEvents = 'auto';
+          btn.style.cursor = 'pointer';
+        } else {
+          btn.style.opacity = '0.4';
+          btn.style.pointerEvents = 'none';
+          btn.style.cursor = 'not-allowed';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
